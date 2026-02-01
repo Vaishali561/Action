@@ -1,5 +1,17 @@
+name: My First Action
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Lets you trigger it manually
+
 jobs:
-  test:
+  hello:
+    runs-on: ubuntu-latest
     steps:
-      - name: 23f2004968@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 23f2004968@ds.study.iitm.ac.in  # Your required step name
+        run: echo "Hello from my GitHub Action! Email step complete."
+
